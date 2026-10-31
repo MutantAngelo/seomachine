@@ -106,10 +106,12 @@ pip install -r data_sources/requirements.txt
 
 ### 3. Configure Data Sources
 
-Copy example config:
+Copy the single maintained environment template from `data_sources/config/.env.example`:
 ```bash
 cp data_sources/config/.env.example data_sources/config/.env
 ```
+
+The root-level `.env.example` duplicate was removed to prevent the two configuration templates from drifting apart. Keep example values in `data_sources/config/.env.example`; never commit actual credentials.
 
 Edit `.env` with your credentials:
 ```env
